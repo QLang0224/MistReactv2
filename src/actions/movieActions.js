@@ -11,7 +11,7 @@ function forecastFetched(forecast) {
 
 export function setForecast(forecast) {
     return dispatch => {
-        dispatch(setForecast(forecast));
+        dispatch(forecastFetched(forecast));
     }
 }
 
