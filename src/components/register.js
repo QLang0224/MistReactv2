@@ -33,7 +33,16 @@ class Register extends Component {
         dispatch(submitRegister(this.state.details));
     }
 
-    render(){
+    async register() {
+        const { dispatch } = this.props;
+        await dispatch(submitRegister(this.state.details));
+        this.setState({ redirectToSignup: true });
+    }
+
+    render() {
+        if (this.state.redirectToSignup) {
+            return <Redirect to="/signup" />;
+        }
         return (
             <Form className='form-horizontal'>
                 <Form.Group controlId="name">
@@ -59,6 +68,5 @@ class Register extends Component {
 const mapStateToProps = state => {
     return {
     }
-}
 
 export default connect(mapStateToProps)(Register);
