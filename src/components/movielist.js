@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { fetchMovies } from "../actions/movieActions";
-import { setMovie } from "../actions/movieActions";
+import { fetchForecastList } from "../actions/movieActions";
+import { setForecast } from "../actions/movieActions";
 import {connect} from 'react-redux';
 import {Image, Nav} from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
