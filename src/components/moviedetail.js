@@ -56,9 +56,9 @@ class ForecastDetail extends Component {
 
 const mapStateToProps = state => {
     return {
-        selectedMovie: state.movie.selectedMovie
+        selectedForecast: state.forecast.selectedForecast
     }
 }
 
-export default connect(mapStateToProps)(MovieDetail);
+export default connect(mapStateToProps)(ForecastDetail);
 
