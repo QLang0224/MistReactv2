@@ -1,5 +1,5 @@
 import actionTypes from '../constants/actionTypes';
-//import runtimeEnv from '@mars/heroku-js-runtime-env'
+import { detectStore } from 'redux';
 const env = process.env;
 
 function forecastFetched(forecast) {
