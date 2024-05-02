@@ -1,4 +1,5 @@
 import actionTypes from '../constants/actionTypes';
+import { detectStore } from 'redux';
 const env = process.env;
 
 function forecastFetched(forecast) {
