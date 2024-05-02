@@ -6,7 +6,7 @@ import {Image, Nav} from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
-class ForeList extends Component {
+class ForecastList extends Component {
     constructor(props) {
         super(props);
         this.handleSelect = this.handleSelect.bind(this);
