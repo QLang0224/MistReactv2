@@ -16,7 +16,7 @@ function Movie(props) {
         dispatch(fetchForecast(forecastId));
     }
 
-    return (<MovieDetail forecastId={forecastId} />)
+    return (<ForecastDetail forecastId={forecastId} />)
 }
 
 export default Forecast;
