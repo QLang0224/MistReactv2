@@ -4,7 +4,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 import {connect} from 'react-redux';
 import {logoutUser} from "../actions/authActions";
 
-class ForecastHeader extends Component {
+class MistHeader extends Component {
     logout() {
         this.props.dispatch(logoutUser());
     }
