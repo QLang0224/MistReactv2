@@ -53,14 +53,14 @@ class ForecastList extends Component {
         }
 
         return (
-            <ForecastListCarousel forecastList={this.props.forecastlist} />
+            <ForecastListCarousel forecastList={this.props.forecast} />
         )
     }
 }
 
 const mapStateToProps = state => {
     return {
-        forecastlist: state.forecast.forecastlist
+        forecast: state.forecast.forecast
     }
 }
 
