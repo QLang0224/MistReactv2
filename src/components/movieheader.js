@@ -19,11 +19,11 @@ class ForecastHeader extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                            <LinkContainer to="/forecastlist">
-                                <Nav.Link disabled={!this.props.loggedIn}>Weekly Forecast</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to={'/forecast/' + (this.props.selectedForecast ? this.props.selectedForecast._id : '')}>
+                            <LinkContainer to="/forecast/">
                                 <Nav.Link disabled={!this.props.loggedIn}>Daily Forecast</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to={'/forecastlist/' + (this.props.selectedForecast ? this.props.selectedForecast._id : '')}>
+                                <Nav.Link disabled={!this.props.loggedIn}>Weekly Forecast</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/signin">
                                 <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
