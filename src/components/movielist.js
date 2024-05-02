@@ -60,7 +60,7 @@ class ForecastList extends Component {
 
 const mapStateToProps = state => {
     return {
-        forecast: state.forecast.forecast
+        forecast: state.forecast.forecastlist
     }
 }
 
