@@ -68,5 +68,5 @@ class Register extends Component {
 const mapStateToProps = state => {
     return {
     }
-
+}
 export default connect(mapStateToProps)(Register);
