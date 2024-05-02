@@ -6,7 +6,7 @@ import ForecastDetail from "../components/moviedetail"
 
 // support routing
 
-function Movie(props) {
+function Forecast(props) {
     const [selectedForecast] = useState(props.selectedForecast);
     const params = useParams();
     const forecastId = params.forecastId;
