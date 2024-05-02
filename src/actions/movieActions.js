@@ -31,7 +31,7 @@ export function fetchForecast(forecastId) {
             }
             return response.json()
         }).then((res) => {
-            dispatch(forecastFetched(res));
+            dispatch(forecastFetched(res.forecast));
         }).catch((e) => console.log(e));
     }
 }
