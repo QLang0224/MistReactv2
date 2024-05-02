@@ -1,27 +1,27 @@
 import constants from '../constants/actionTypes'
 
 let initialState = {
-      movies: [],
-      selectedMovie: null
+      forecastlist: [],
+      selectedForecast: null
 }
 
-const movieReducer = (state = initialState, action) => {
+const forecastReducer = (state = initialState, action) => {
       let updated = Object.assign({}, state);
 
       switch(action.type) {
-            case constants.FETCH_MOVIES:
-                  updated['movies'] = action.movies;
-                  updated['selectedMovie'] = action.movies[0];
+            case constants.FETCH_FORECASTLIST:
+                  updated['forecastlist'] = action.forecastlist;
+                  updated['selectedForecast'] = action.forecastlist[0];
                   return updated;
-            case constants.SET_MOVIE:
-                  updated['selectedMovie'] = action.selectedMovie;
+            case constants.SET_FORECAST:
+                  updated['selectedForecast'] = action.selectedForecast;
                   return updated;
-            case constants.FETCH_MOVIE:
-                  updated['selectedMovie'] = action.selectedMovie;
+            case constants.FETCH_FORECAST:
+                  updated['selectedForecast'] = action.selectedForecast;
                   return updated;
             default:
                   return state;
       }
 }
 
-export default movieReducer;
+export default forecastReducer;
