@@ -60,7 +60,7 @@ class ForeList extends Component {
 
 const mapStateToProps = state => {
     return {
-        movies: state.forecast.forecastlist
+        forecastlist: state.forecast.forecastlist
     }
 }
 
