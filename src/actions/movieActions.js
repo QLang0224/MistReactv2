@@ -17,7 +17,7 @@ export function setForecast(forecast) {
 
 export function fetchForecast(forecastId) {
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/forecastlist/${forecastId}?reviews=true`, {
+        return fetch(`${env.REACT_APP_API_URL}/forecastlist/${forecastId}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -38,7 +38,7 @@ export function fetchForecast(forecastId) {
 
 export function fetchForecastList() {
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/forecastlist?reviews=true`, {
+        return fetch(`${env.REACT_APP_API_URL}/forecastlist`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
