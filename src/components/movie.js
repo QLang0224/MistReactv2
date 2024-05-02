@@ -12,7 +12,7 @@ function Forecast(props) {
     const forecastId = params.forecastId;
     console.log(forecastId);
     const dispatch = useDispatch();
-    if (selectedMovie == null) {
+    if (selectedForecast == null) {
         dispatch(fetchForecast(forecastId));
     }
 
