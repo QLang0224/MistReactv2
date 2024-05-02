@@ -14,7 +14,7 @@ function App() {
       <Provider store={store}>
         <HashRouter>
           <div>
-            <MovieHeader />
+            <MistHeader />
             <Route exact path="/" render={()=><ForecastList />}/>
             <Route exact path="/forecastlist" render={()=><ForecastList />}/>
             <Route exact path="/forecast/:forecastId" render={()=><Forecast />}/>
