@@ -4,7 +4,6 @@ import { setForecast } from "../actions/movieActions";
 import {connect} from 'react-redux';
 import {Image, Nav} from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
-import { BsStarFill} from 'react-icons/bs'
 import {LinkContainer} from 'react-router-bootstrap';
 
 class ForeList extends Component {
@@ -31,20 +30,20 @@ class ForeList extends Component {
     render() {
         const ForecastListCarousel = ({forecastList}) => {
             if (!forecastList) {
-                return <div>Loading....</div>
+                return <div>Loading...</div>
             }
 
             return (
                 <Carousel onSelect={this.handleSelect}>
                     {forecastList.map((forecastlist) =>
-                        <Carousel.Item key={forecast._id}>
+                        <Carousel.Item key={forecast.forecastId}>
                             <div>
-                                <LinkContainer to={'/forecast/'+forecast._id} onClick={()=>this.handleClick(movie)}>
+                                <LinkContainer to={'/forecast/'+forecast.forecastId} onClick={()=>this.handleClick(movie)}>
                                     <Nav.Link><Image className="image" src={forecast.imageUrl} thumbnail /></Nav.Link>
                                 </LinkContainer>
                             </div>
                             <Carousel.Caption>
-                                <h3>{forecast.temperaturefarenheit}</h3>
+                                <h3>{forecast.temperatureFahrenheit}</h3>
                             </Carousel.Caption>
                         </Carousel.Item>
                     )}
