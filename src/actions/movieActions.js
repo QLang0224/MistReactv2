@@ -1,5 +1,5 @@
 import actionTypes from '../constants/actionTypes';
-//import runtimeEnv from '@mars/heroku-js-runtime-env'
+import { detectStore } from 'redux';
 const env = process.env;
 
 function forecastFetched(forecast) {
@@ -38,7 +38,7 @@ export function fetchForecast(forecastId) {
 
 export function fetchForecastList() {
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/forecastlist`, {
+        return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

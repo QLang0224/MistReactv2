@@ -19,6 +19,7 @@ function App() {
             <Route exact path="/forecastlist" render={()=><ForecastList />}/>
             <Route exact path="/forecast/:forecastId" render={()=><Forecast />}/>
             <Route path="/signin" render={()=><Authentication />}/>
+            <Route path="/signup" render={()=><Authentication />}/>
           </div>
         </HashRouter>
       </Provider>
