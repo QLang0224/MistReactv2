@@ -5,12 +5,12 @@ import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { BsStarFill } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 
-class MovieDetail extends Component {
+class ForecastDetail extends Component {
 
     componentDidMount() {
         const {dispatch} = this.props;
-        if (this.props.selectedMovie == null) {
-            dispatch(fetchMovie(this.props.movieId));
+        if (this.props.selectedForecast == null) {
+            dispatch(fetchForecast(this.props.forecastId));
         }
     }
 
