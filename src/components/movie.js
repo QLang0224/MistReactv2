@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { fetchForecast } from "../actions/movieActions";
-import MovieDetail from "../components/moviedetail"
+import ForecastDetail from "../components/moviedetail"
 
 // support routing
 
