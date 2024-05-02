@@ -44,4 +44,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(ForecastHeader);
+export default connect(mapStateToProps)(MistHeader);
