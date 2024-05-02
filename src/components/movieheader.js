@@ -29,7 +29,7 @@ class MistHeader extends Component {
                                 <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/signup">
-                                <Nav.Link>{this.props.submitRegister ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Signup'}</Nav.Link>
+                                <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Signup'}</Nav.Link>
                             </LinkContainer>
                     </Nav>
                     </Navbar.Collapse>
