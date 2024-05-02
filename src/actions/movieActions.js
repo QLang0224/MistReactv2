@@ -2,36 +2,22 @@ import actionTypes from '../constants/actionTypes';
 //import runtimeEnv from '@mars/heroku-js-runtime-env'
 const env = process.env;
 
-function moviesFetched(movies) {
+function forecastFetched(forecast) {
     return {
-        type: actionTypes.FETCH_MOVIES,
-        movies: movies
+        type: actionTypes.FETCH_FORECAST,
+        selectedForecast: forecast
     }
 }
 
-function movieFetched(movie) {
-    return {
-        type: actionTypes.FETCH_MOVIE,
-        selectedMovie: movie
-    }
-}
-
-function movieSet(movie) {
-    return {
-        type: actionTypes.SET_MOVIE,
-        selectedMovie: movie
-    }
-}
-
-export function setMovie(movie) {
+export function setForecast(forecast) {
     return dispatch => {
-        dispatch(movieSet(movie));
+        dispatch(forecastSet(forecast));
     }
 }
 
-export function fetchMovie(movieId) {
+export function fetchForecast(forecastId) {
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/movies/${movieId}?reviews=true`, {
+        return fetch(`${env.REACT_APP_API_URL}/forecastlist/${forecastId}?reviews=true`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -45,14 +31,14 @@ export function fetchMovie(movieId) {
             }
             return response.json()
         }).then((res) => {
-            dispatch(movieFetched(res));
+            dispatch(forecastFetched(res));
         }).catch((e) => console.log(e));
     }
 }
 
-export function fetchMovies() {
+export function fetchForecastList() {
     return dispatch => {
-        return fetch(`${env.REACT_APP_API_URL}/movies?reviews=true`, {
+        return fetch(`${env.REACT_APP_API_URL}/forecastlist?reviews=true`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -66,7 +52,7 @@ export function fetchMovies() {
             }
             return response.json()
         }).then((res) => {
-            dispatch(moviesFetched(res));
+            dispatch(forecastFetched(res));
         }).catch((e) => console.log(e));
     }
 }
