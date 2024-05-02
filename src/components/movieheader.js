@@ -4,7 +4,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 import {connect} from 'react-redux';
 import {logoutUser} from "../actions/authActions";
 
-class MovieHeader extends Component {
+class ForecastHeader extends Component {
     logout() {
         this.props.dispatch(logoutUser());
     }
@@ -23,7 +23,7 @@ class MovieHeader extends Component {
                                 <Nav.Link disabled={!this.props.loggedIn}>Weekly Forecast</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to={'/forecast/' + (this.props.selectedForecast ? this.props.selectedForecast._id : '')}>
-                                <Nav.Link disabled={!this.props.loggedIn}>Movie Detail</Nav.Link>
+                                <Nav.Link disabled={!this.props.loggedIn}>Daily Forecast</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/signin">
                                 <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
