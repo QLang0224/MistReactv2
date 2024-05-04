@@ -25,11 +25,11 @@ class MistHeader extends Component {
                             <LinkContainer to={'/forecastlist/'}>
                                 <Nav.Link disabled={!this.props.loggedIn}>Weekly Forecast</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/signin">
-                                <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
-                            </LinkContainer>
                             <LinkContainer to="/">
                                 <Nav.Link disabled={!this.props.loggedIn}>Home</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/signin">
+                                <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
                             </LinkContainer>
                     </Nav>
                     </Navbar.Collapse>
