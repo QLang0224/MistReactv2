@@ -19,9 +19,6 @@ class MistHeader extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                            <LinkContainer to="/">
-                                <Nav.Link disabled={!this.props.loggedIn}>Home</Nav.Link>
-                            </LinkContainer>
                             <LinkContainer to="/forecast/">
                                 <Nav.Link disabled={!this.props.loggedIn}>Daily Forecast</Nav.Link>
                             </LinkContainer>
@@ -30,6 +27,9 @@ class MistHeader extends Component {
                             </LinkContainer>
                             <LinkContainer to="/signin">
                                 <Nav.Link>{this.props.loggedIn ? <button onClick={this.logout.bind(this)}>Logout</button> : 'Login'}</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/">
+                                <Nav.Link disabled={!this.props.loggedIn}>Home</Nav.Link>
                             </LinkContainer>
                     </Nav>
                     </Navbar.Collapse>
