@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MistHeader from './components/MistHeader';
+import MistHeader from './components/Mistheader';
 import ForecastList from './components/forecastlist';
 import Forecast from './components/forecast';
 import Authentication from './components/authentication';
