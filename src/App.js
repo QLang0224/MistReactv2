@@ -16,7 +16,7 @@ function App() {
           <div>
             <MistHeader />
             <Route exact path="/" render={()=><ForecastList />}/>
-            <Route exact path="/forecast/forecastlist" render={()=><ForecastList />}/>
+            <Route exact path="/forecastlist" render={()=><ForecastList />}/>
             <Route exact path="/forecast/:forecastId" render={()=><Forecast />}/>
             <Route path="/signin" render={()=><Authentication />}/>
             <Route path="/signup" render={()=><Authentication />}/>
