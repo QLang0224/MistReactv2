@@ -21,7 +21,7 @@ class ForecastDetail extends Component {
 
             return (
                 <Card>
-                    <Card.Header>Movie Detail</Card.Header>
+                    <Card.Header>Forecast Detail</Card.Header>
                     <Card.Body>
                         <Image className="image" src={this.props.selectedForecast.imageUrl} thumbnail />
                     </Card.Body>
