@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import MistHeader from './components/movieheader';
-import ForecastList from './components/movielist';
-import Forecast from './components/movie';
+import MistHeader from './components/MistHeader';
+import ForecastList from './components/forecastlist';
+import Forecast from './components/forecast';
 import Authentication from './components/authentication';
 import {HashRouter, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
