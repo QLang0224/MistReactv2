@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchForecast } from "../actions/movieActions";
+import { fetchForecast } from "../actions/forecastActions";
 import {connect} from 'react-redux';
 import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
