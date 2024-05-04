@@ -19,6 +19,9 @@ class MistHeader extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
+                            <LinkContainer to="/">
+                                <Nav.Link disabled={!this.props.loggedIn}>Home</Nav.Link>
+                            </LinkContainer>
                             <LinkContainer to="/forecast/">
                                 <Nav.Link disabled={!this.props.loggedIn}>Daily Forecast</Nav.Link>
                             </LinkContainer>
