@@ -66,7 +66,7 @@ export function fetchForecastList() {
                 throw Error(response.statusText);
             }
 
-            return fetch(`${env.REACT_APP_API_URL}/forecast/`, {
+            return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
