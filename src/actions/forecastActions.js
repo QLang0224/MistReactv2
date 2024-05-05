@@ -3,14 +3,14 @@ const env = process.env;
 
 function forecastListFetched(forecastlist) {
     return {
-        type: actionTypes.FETCH_FORECAST,
+        type: actionTypes.FETCH_FORECASTLIST,
         forecastlist: forecastlist
     }
 }
 
 function forecastFetched(forecast) {
     return {
-        type: actionTypes.FETCH_MOVIE,
+        type: actionTypes.FETCH_FORECAST,
         selectedForecast: forecast
     }
 }
