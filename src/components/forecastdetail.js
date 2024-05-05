@@ -8,7 +8,7 @@ class ForecastDetail extends Component {
     componentDidMount() {
         const { dispatch, forecastId, selectedForecast } = this.props;
         if (!selectedForecast) {
-            dispatch(fetchForecast(forecast._id));
+            dispatch(fetchForecast(forecastId));
         }
     }
 
