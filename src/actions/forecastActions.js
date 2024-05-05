@@ -50,7 +50,7 @@ export function fetchForecast(forecastId) {
     }
 }
 
-export function fetchForecastList(forecastlist) {
+export function fetchForecastList() {
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
             method: 'PUT',
@@ -59,43 +59,14 @@ export function fetchForecastList(forecastlist) {
                 'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             },
-            mode: 'cors',
-        })
-        .then(response => {
+            mode: 'cors'
+        }).then((response) => {
             if (!response.ok) {
                 throw Error(response.statusText);
             }
-            // Log response status for debugging
-            console.log('Response status:', response.status);
-
-            // Return the next promise in the chain
-            return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': localStorage.getItem('token')
-                },
-                mode: 'cors'
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw Error(response.statusText);
-                }
-                // Log response status for debugging
-                console.log('Response status:', response.status);
-                
-                return response.json()
-            })
-            .then((res) => {
-                dispatch(forecastFetched(res.forecast));
-            })
-            .catch((e) => {
-                console.log('Error:', e);
-                // Rethrow the error to be caught by the outer catch block
-                throw e;
-            });
-        })
-        .catch((e) => console.log(e)); // Handle outer catch block
+            return response.json()
+        }).then((res) => {
+            dispatch(forecastFetched(res));
+        }).catch((e) => console.log(e));
     }
 }
