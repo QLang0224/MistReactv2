@@ -28,14 +28,14 @@ class ForecastList extends Component {
     }
 
     render() {
-        const ForecastListCarousel = ({forecastList}) => {
-            if (!forecastList) {
+        const ForecastListCarousel = ({forecastlist}) => {
+            if (!forecastlist) {
                 return <div>Loading...</div>
             }
 
             return (
                 <Carousel onSelect={this.handleSelect}>
-                    {forecastList.map((forecast) =>
+                    {forecastlist.map((forecast) =>
                         <Carousel.Item key={forecast._id}>
                             <div>
                                 <LinkContainer to={'/forecast/'+forecast._id} onClick={()=>this.handleClick(forecast)}>
@@ -54,7 +54,7 @@ class ForecastList extends Component {
         }
 
         return (
-            <ForecastListCarousel forecastList={this.props.forecastlist} />
+            <ForecastListCarousel forecastlist={this.props.forecastlist} />
         )
     }
 }
