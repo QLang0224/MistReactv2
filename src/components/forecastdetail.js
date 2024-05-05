@@ -6,7 +6,7 @@ import { Image } from 'react-bootstrap';
 
 class ForecastDetail extends Component {
     componentDidMount() {
-        const { dispatch, forecast._id, selectedForecast } = this.props;
+        const { dispatch, forecastId, selectedForecast } = this.props;
         if (!selectedForecast) {
             dispatch(fetchForecast(forecast._id));
         }
