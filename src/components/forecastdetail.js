@@ -27,8 +27,8 @@ class ForecastDetail extends Component {
                         <ListGroup>
                                 <ListGroupItem>Temperature: {selectedForecast.temperatureFarenheit}</ListGroupItem>
                                 <ListGroupItem>Conditions: {selectedForecast.conditions}</ListGroupItem>
-                                <ListGroupItem>Conditions: {selectedForecast.windSpeed}</ListGroupItem>
-                                <ListGroupItem>Conditions: {selectedForecast.precipitationchance}</ListGroupItem>
+                                <ListGroupItem>WindSpeed: {selectedForecast.windSpeed}</ListGroupItem>
+                                <ListGroupItem>PrecipitationChance: {selectedForecast.precipitationchance}</ListGroupItem>
                         </ListGroup>
                     </Card.Body>
                 </Card>
