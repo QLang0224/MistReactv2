@@ -9,14 +9,13 @@ import ForecastDetail from "../components/forecastdetail"
 function Forecast(props) {
     const [selectedForecast] = useState(props.selectedForecast);
     const params = useParams();
-    const forecastId = params.forecastId;
-    console.log(forecastId);
+    console.log(forecast._id);
     const dispatch = useDispatch();
     if (selectedForecast == null) {
-        dispatch(fetchForecast(forecastId));
+        dispatch(fetchForecast(forecast._id));
     }
 
-    return (<ForecastDetail forecastId={forecastId} />)
+    return (<ForecastDetail forecastId={forecast._id} />)
 }
 
 export default Forecast;
