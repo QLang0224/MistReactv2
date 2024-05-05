@@ -44,7 +44,7 @@ class ForecastList extends Component {
                             </div>
                             <Carousel.Caption>
                                 <h3>{forecast.timeOfDay}</h3>
-                                <p>Temperature: {forecast.tempertureFahrenheit}°F</p>
+                                <p>Temperature: {forecast.temperatureFahrenheit}°F</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     )}
