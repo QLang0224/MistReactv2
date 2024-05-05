@@ -24,6 +24,12 @@ class ForecastDetail extends Component {
                     <Card.Header>Forecast Detail</Card.Header>
                     <Card.Body>
                         <Image className="image" src={this.props.selectedForecast.imageUrl} thumbnail />
+                        <ListGroup>
+                                <ListGroupItem>Temperature: {selectedForecast.temperatureFarenheit}</ListGroupItem>
+                                <ListGroupItem>Conditions: {selectedForecast.conditions}</ListGroupItem>
+                                <ListGroupItem>Conditions: {selectedForecast.windSpeed}</ListGroupItem>
+                                <ListGroupItem>Conditions: {selectedForecast.precipitationchance}</ListGroupItem>
+                        </ListGroup>
                     </Card.Body>
                 </Card>
             )
