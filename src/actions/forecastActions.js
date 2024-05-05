@@ -50,7 +50,7 @@ export function fetchForecast(forecastId) {
     }
 }
 
-export function fetchForecastList() {
+export function fetchForecastList(forecastlist) {
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
             method: 'PUT',
