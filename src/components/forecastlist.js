@@ -53,7 +53,7 @@ class ForecastList extends Component {
         }
 
         return (
-            <ForecastListCarousel forecastList={this.props.forecastList} />
+            <ForecastListCarousel forecastList={this.props.forecastlist} />
         )
     }
 }
