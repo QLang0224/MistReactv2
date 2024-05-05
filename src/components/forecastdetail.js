@@ -7,7 +7,6 @@ import { Image } from 'react-bootstrap';
 class ForecastDetail extends Component {
     componentDidMount() {
         const { dispatch, forecastId, selectedForecast } = this.props;
-        // Fetch forecast data if not already fetched
         if (!selectedForecast) {
             dispatch(fetchForecast(forecastId));
         }
