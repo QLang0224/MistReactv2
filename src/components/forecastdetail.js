@@ -20,14 +20,14 @@ class ForecastDetail extends Component {
                 <h2>Forecast Detail</h2>
                 {selectedForecast ? (
                     <Card>
-                        <Card.Header>Forecast Detail</Card.Header>
+                        <Card.Header>Daily Details</Card.Header>
                         <Card.Body>
                             <Image className="image" src={selectedForecast.imageUrl} thumbnail />
                             <ListGroup>
                                 <ListGroupItem>Temperature: {selectedForecast.temperatureFarenheit}</ListGroupItem>
                                 <ListGroupItem>Conditions: {selectedForecast.conditions}</ListGroupItem>
-                                <ListGroupItem>WindSpeed: {selectedForecast.windSpeed}</ListGroupItem>
-                                <ListGroupItem>PrecipitationChance: {selectedForecast.precipitationChance}</ListGroupItem>
+                                <ListGroupItem>Wind Speed: {selectedForecast.windSpeed}</ListGroupItem>
+                                <ListGroupItem>Precipitation Chance: {selectedForecast.precipitationChance}</ListGroupItem>
                             </ListGroup>
                         </Card.Body>
                     </Card>

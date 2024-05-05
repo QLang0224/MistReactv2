@@ -15,7 +15,7 @@ function forecastFetched(forecast) {
     }
 }
 
-export function forecastSet(forecast) {
+function forecastSet(forecast) {
     return {
         type: actionTypes.SET_FORECAST,
         selectedForecast: forecast
