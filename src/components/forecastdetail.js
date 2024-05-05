@@ -20,7 +20,7 @@ class ForecastDetail extends Component {
                 <h2>Forecast Detail</h2>
                 {selectedForecast ? (
                     <Card>
-                        <Card.Header>Daily Details</Card.Header>
+                        <Card.Header>Daily Forecast</Card.Header>
                         <Card.Body>
                             <Image className="image" src={selectedForecast.imageUrl} thumbnail />
                             <ListGroup>
