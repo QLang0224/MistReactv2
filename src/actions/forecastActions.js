@@ -53,7 +53,7 @@ export function fetchForecast(forecastId) {
 export function fetchForecastList() {
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/forecastlist/`, {
-            method: 'PUT',
+            method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
