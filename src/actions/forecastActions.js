@@ -1,20 +1,34 @@
 import actionTypes from '../constants/actionTypes';
 const env = process.env;
 
-function forecastFetched(forecast) {
+function forecastListFetched(forecastlist) {
     return {
         type: actionTypes.FETCH_FORECAST,
+        forecastlist: forecastlist
+    }
+}
+
+function forecastFetched(forecast) {
+    return {
+        type: actionTypes.FETCH_MOVIE,
+        selectedForecast: forecast
+    }
+}
+
+export function forecastSet(forecast) {
+    return {
+        type: actionTypes.SET_FORECAST,
         selectedForecast: forecast
     }
 }
 
 export function setForecast(forecast) {
     return dispatch => {
-        dispatch(forecastFetched(forecast));
+        dispatch(forecastSet(forecast));
     }
 }
 
-export function fetchForecast(forecastId) {
+export function fetchForecast() {
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/forecast/`, {
             method: 'PUT',
@@ -66,7 +80,7 @@ export function fetchForecastList() {
             }
             return response.json()
         }).then((res) => {
-            dispatch(forecastFetched(res));
+            dispatch(forecastListFetched(res));
         }).catch((e) => console.log(e));
     }
 }

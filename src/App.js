@@ -18,6 +18,7 @@ function App() {
             <Route exact path="/" render={()=><ForecastList />}/>
             <Route exact path="/forecastlist" render={()=><ForecastList />}/>
             <Route exact path="/forecast/:forecastId" render={()=><Forecast />}/>
+            <Route exact path="/forecast" render={()=><Forecast />}/>
             <Route path="/signin" render={()=><Authentication />}/>
             <Route path="/signup" render={()=><Authentication />}/>
           </div>
