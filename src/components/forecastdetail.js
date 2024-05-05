@@ -1,43 +1,42 @@
 import React, { Component } from 'react';
 import { fetchForecast } from "../actions/forecastActions";
-import {connect} from 'react-redux';
-import {Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 
 class ForecastDetail extends Component {
-
     componentDidMount() {
-        const {dispatch} = this.props;
-        if (this.props.selectedForecast == null) {
-            dispatch(fetchForecast(this.props.forecastId));
+        const { dispatch, forecastId, selectedForecast } = this.props;
+        // Fetch forecast data if not already fetched
+        if (!selectedForecast) {
+            dispatch(fetchForecast(forecastId));
         }
     }
 
     render() {
-        const DetailInfo = () => {
-            if (!this.props.selectedForecast) {
-                return <div>Loading....</div>
-            }
-
-            return (
-                <Card>
-                    <Card.Header>Forecast Detail</Card.Header>
-                    <Card.Body>
-                        <Image className="image" src={this.props.selectedForecast.imageUrl} thumbnail />
-                        <ListGroup>
-                                <ListGroupItem>Temperature: {this.props.selectedForecast.temperatureFarenheit}</ListGroupItem>
-                                <ListGroupItem>Conditions: {this.props.selectedForecast.conditions}</ListGroupItem>
-                                <ListGroupItem>WindSpeed: {this.props.selectedForecast.windSpeed}</ListGroupItem>
-                                <ListGroupItem>PrecipitationChance: {this.props.selectedForecast.precipitationChance}</ListGroupItem>
-                        </ListGroup>
-                    </Card.Body>
-                </Card>
-            )
-        }
+        const { selectedForecast } = this.props;
 
         return (
-            <DetailInfo />
-        )
+            <div>
+                <h2>Forecast Detail</h2>
+                {selectedForecast ? (
+                    <Card>
+                        <Card.Header>Forecast Detail</Card.Header>
+                        <Card.Body>
+                            <Image className="image" src={selectedForecast.imageUrl} thumbnail />
+                            <ListGroup>
+                                <ListGroupItem>Temperature: {selectedForecast.temperatureFarenheit}</ListGroupItem>
+                                <ListGroupItem>Conditions: {selectedForecast.conditions}</ListGroupItem>
+                                <ListGroupItem>WindSpeed: {selectedForecast.windSpeed}</ListGroupItem>
+                                <ListGroupItem>PrecipitationChance: {selectedForecast.precipitationChance}</ListGroupItem>
+                            </ListGroup>
+                        </Card.Body>
+                    </Card>
+                ) : (
+                    <p>Loading forecast data...</p>
+                )}
+            </div>
+        );
     }
 }
 
